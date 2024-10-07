@@ -3,23 +3,47 @@ const calculate = () => {
     const secInpValue = +document.getElementById("second-num").value;
     const oper = document.getElementById("operation").value;
 
+    const plus = () => {
+        return firInpValue + secInpValue;
+
+    }
+
+
+    const multiply = () => {
+        return firInpValue * secInpValue;
+
+    }
+
+
+    const divide = () => {
+        return firInpValue / secInpValue;
+
+    }
+
+
+    const minus = () => {
+        return firInpValue - secInpValue;
+
+    }
+
+
     let result
 
     switch (oper) {
         case "+":
-            result = firInpValue + secInpValue
+            result = plus(firInpValue, secInpValue);
             break
 
         case "-":
-            result = firInpValue - secInpValue
+            result = minus(firInpValue, secInpValue);
             break
 
         case "/":
-            result = firInpValue / secInpValue
+            result = divide(firInpValue, secInpValue);
             break
 
         case "*":
-            result = firInpValue * secInpValue
+            result = multiply(firInpValue, secInpValue);
             break
 
         default:
